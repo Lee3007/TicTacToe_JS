@@ -30,11 +30,16 @@ function handleClick(event){
       alert("Game Over, the winner is: " + winner);
       cleanBoard();
     } );
-
+  }
+  else if( checkDraw() ){
+    sleep(100).then( () => {
+      alert("Draw! No one wins.");
+      cleanBoard();
+    } );
   }
 
-
 }
+
 
 function checkIfAvailable(position){
 
@@ -175,4 +180,16 @@ function cleanBoard(){
     square.innerHTML = '';
   } )
 
+}
+
+function checkDraw(){
+  const auxVector = gameBoard.filter( (marker) => {
+    return marker === 0;
+  } );
+
+  if(auxVector.length === 0){
+    return 1;
+  }
+
+  return 0;
 }
