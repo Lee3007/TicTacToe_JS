@@ -9,7 +9,7 @@
  
 </div>
 
-<h3>https://lee3007.github.io/tik-tak-toe-web/</h3>
+<h3>https://lee3007.github.io/TicTacToe_JS/</h3>
 
 <br/>  
 
